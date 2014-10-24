@@ -1,0 +1,24 @@
+﻿<h2>Home</h2>
+@using (Html.BeginRouteForm("Default", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <fieldset>
+        <legend>Create new specification</legend>
+        <div class="form-group">
+            <label for="periodStart" class="col-sm-2 control-label">Period start</label>
+            <div class="col-sm-10">
+                @Html.TextBox("periodStart", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="periodEnd" class="col-sm-2 control-label">Period end</label>
+            <div class="col-sm-10">
+                @Html.TextBox("periodEnd", null, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Create specification</button>
+            </div>
+        </div>
+    </fieldset>
+}

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Bosbec.CreateSpecificationExample.MvcApplication" Language="C#" %>

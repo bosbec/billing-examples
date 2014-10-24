@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bosbec Create Specification Example</title>
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <style type="text/css">
+            body 
+            {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            
+            .header 
+            {
+                border-bottom: 1px solid #e5e5e5;
+            }
+                
+            .header h3 
+            {
+                padding-bottom: 19px;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 40px;
+            }
+            
+            .footer 
+            {
+                padding-top: 19px;
+                color: #777;
+                border-top: 1px solid #e5e5e5;
+                text-align: center;
+            }
+            
+            @@media (min-width: 768px) 
+            {
+                .container 
+                {
+                    max-width: 730px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul class="nav nav-pills pull-right">
+                    <li>@Html.RouteLink("Home", "Default")</li>
+                    <li>@Html.RouteLink("Specifications", "ListSpecifications")</li>
+                </ul>
+                <h3 class="text-muted">Bosbec Create Specification Example</h3>
+            </div>
+            @RenderBody()
+            <div class="footer">
+                <p>Copyright &copy; Bosbec 2014</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $("ul.nav li").each(function (index, element) {
+                    var link = $("a", $(element));
+
+                    if (link.attr("href") === window.location.pathname) {
+                        $(element).addClass("active");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
