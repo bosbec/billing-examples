@@ -50,8 +50,8 @@ public class AuthenticationHelper {
     }
 
     public static String authenticate() {
-        String username = "kim@bosbec.se";
-        String password = "kalle";
+        String username = ConfigurationHelper.getUsername();
+        String password = ConfigurationHelper.getPassword();
 
         return authenticate(username, password);
     }
